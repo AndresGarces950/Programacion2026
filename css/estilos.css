@@ -1,0 +1,198 @@
+/* ===========================================
+   SPA ARMONÍA - ESTILOS PRINCIPALES
+   Archivo: estilos.css
+   =========================================== */
+
+/* ========= VARIABLES ========= */
+:root{
+    --color-principal:#2E8B57;
+    --color-secundario:#6EC6A9;
+    --color-fondo:#F8F9FA;
+    --color-texto:#333333;
+    --color-blanco:#FFFFFF;
+    --color-footer:#1F2937;
+}
+
+/* ========= CONFIGURACIÓN GENERAL ========= */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:var(--color-fondo);
+    color:var(--color-texto);
+    line-height:1.6;
+}
+
+/* ========= NAVBAR ========= */
+.navbar{
+    transition:.4s;
+}
+
+.navbar-brand{
+    font-size:1.6rem;
+}
+
+.nav-link{
+    font-weight:bold;
+}
+
+.nav-link:hover{
+    color:#FFE082 !important;
+}
+
+/* ========= HERO ========= */
+.hero{
+    height:90vh;
+    background:linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
+    url("../img/banner.jpg");
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+}
+
+.hero h1{
+    font-size:4rem;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:1.3rem;
+}
+
+.hero .btn{
+    margin-top:25px;
+    padding:15px 40px;
+    border-radius:40px;
+}
+
+/* ========= TÍTULOS ========= */
+section h2{
+    color:var(--color-principal);
+    font-weight:bold;
+}
+
+/* ========= TARJETAS ========= */
+.card{
+    border:none;
+    transition:.4s;
+    overflow:hidden;
+    border-radius:15px;
+}
+
+.card img{
+    height:250px;
+    object-fit:cover;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 15px 35px rgba(0,0,0,.2);
+}
+
+/* ========= BOTONES ========= */
+.btn-success{
+    background:var(--color-principal);
+    border:none;
+}
+
+.btn-success:hover{
+    background:#206040;
+}
+
+/* ========= FOOTER ========= */
+footer{
+    background:var(--color-footer);
+    color:white;
+}
+
+footer p{
+    margin:0;
+}
+
+/* ========= ANIMACIONES ========= */
+.card{
+    animation:aparecer .8s ease;
+}
+
+@keyframes aparecer{
+
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+/* ========= RESPONSIVE ========= */
+
+@media(max-width:992px){
+
+.hero h1{
+
+font-size:3rem;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.hero{
+
+height:70vh;
+
+}
+
+.hero h1{
+
+font-size:2.2rem;
+
+}
+
+.hero p{
+
+font-size:1rem;
+
+}
+
+.navbar-brand{
+
+font-size:1.2rem;
+
+}
+
+.card{
+
+margin-bottom:25px;
+
+}
+
+}
+
+@media(max-width:576px){
+
+.hero h1{
+
+font-size:1.8rem;
+
+}
+
+.hero .btn{
+
+padding:10px 25px;
+
+}
+
+}
